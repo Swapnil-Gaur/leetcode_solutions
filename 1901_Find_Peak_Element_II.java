@@ -13,6 +13,11 @@ class Solution {
 	        // will get max element position for that row
 	        int rowmax = maxRowElementPosition(mat[middleRow], mat[middleRow].length-1);
 
+		//this base case is required for 1d array input
+		if(mat.length==1){
+	       	    return new int[]{0,rowmax};
+	    	 }
+
 	        // middle row is the first row
 	        if (middleRow == 0) {
 	            if (mat[middleRow][rowmax] > mat[middleRow + 1][rowmax]) {
